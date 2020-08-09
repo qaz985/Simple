@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style type="text/css">
+      body {
+        background: #727272;
+        text-align: center;
+        font-family: "나눔고딕", NanumGothic, "돋움", Dotum, Helvetica,
+          AppleSDGothicNeo-Medium, AppleGothic, sans-serif;
+        font-size: 12px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      hr {
+        background-color: #fff;
+        border-top: 1px dotted #aaa;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+      }
+
+      #wrap {
+        position: relative;
+        text-align: left;
+        min-height: 100%;
+        margin: 0 auto;
+        padding-top: 7px;
+      }
+
+      #wrap.basic {
+        width: 1095px;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 10000;
+        width: 148px;
+        border-left: 1px solid #212121;
+        border-right: 1px solid #212121;
+        background: #2b2b2b;
+        min-height: 100%;
+        text-align: left;
+        color: white;
+        *position: absolute;
+        *left: 0;
+        *z-index: auto;
+      }
+
+      .menu_header {
+        font-size: 20px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .menu_body {
+        font-size: 15px;
+      }
+
+      .menu_footer {
+        font-size: 20px;
+        text-align: center;
+        border: 0.5px solid #2c2c2c;
+        background-color: #3b3b3b;
+        padding: 10px;
+      }
+
+      .menu_body ul {
+        width: 100%;
+        display: block;
+        list-style: none;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+
+      .menu_body ul li {
+        height: 30px;
+        border: 0.5px solid #2c2c2c;
+        padding-top: 15px;
+        padding-left: 10px;
+        background-color: #3b3b3b;
+        font-weight: 700;
+      }
+
+      .container_header {
+        height: 30px;
+        text-align: right;
+        color: white;
+      }
+
+      .container {
+        margin-right: 200px;
+        padding-left: 170px;
+      }
+
+      .container_header div {
+        display: inline-block;
+      }
+
+      .container_header_login {
+        width: 40px;
+        height: 20px;
+        border: 1px solid gray;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .container_header_search {
+        height: 30px;
+        text-align: center;
+      }
+
+      .container_rank {
+        border-left: 1px solid #212121;
+        border-right: 1px solid #212121;
+        background: #2b2b2b;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        padding-top: 40px;
+        border-bottom: 0;
+      }
+
+      .container_main {
+        background: white;
+        height: 950px;
+      }
+
+      .container_rank_header {
+        position: absolute;
+        top: 23px;
+        width: 100%;
+        display: block;
+      }
+
+      .container_rank_header ul {
+        width: 500px;
+        height: 33px;
+        margin: 0 auto;
+        list-style: none;
+        display: block;
+      }
+
+      .container_rank_header ul li {
+        float: left;
+        padding: 0 10px;
+        color: white;
+        font-size: 13px;
+      }
+
+      .container_rank_main {
+        margin: auto;
+        padding-top: 30px;
+      }
+
+      .container_rank_main ul {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .container_rank_main ul li {
+        display: inline-flex;
+        width: 120px;
+        height: 200px;
+        margin: 5px 3px 4px 3px;
+        text-decoration: none;
+        background-color: white;
+      }
+
+      .container_main_1 {
+        width: 722px;
+        height: 300px;
+        display: flex;
+        border: 2px solid #f2f2f2;
+      }
+
+      .container_review {
+        width: 70%;
+        border: 1px solid #f2f2f2;
+        padding: 15px 50px;
+      }
+
+      .container_spotlight {
+        width: 30%;
+        border: 1px solid #f2f2f2;
+        padding: 15px 20px;
+      }
+
+      .container_spotlight img {
+        border: 1px solid #000;
+        width: 200px;
+        height: 200px;
+      }
+
+      .container_main_2 {
+        width: 722px;
+        height: 250px;
+        border: 2px solid #f2f2f2;
+      }
+
+      .container_main_2_header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+      }
+
+      .container_main_2_content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container_main_2_content li {
+        display: inline-flex;
+        width: 150px;
+        height: 150px;
+        margin: 1px;
+        text-decoration: none;
+        background-color: rgb(112, 70, 70);
+      }
+
+      .container_main_3 {
+        width: 722px;
+        height: 250px;
+        border: 2px solid #f2f2f2;
+      }
+
+      .container_main_3_content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container_main_3_content li {
+        display: inline-flex;
+        width: 100px;
+        height: 150px;
+        margin: 1px;
+        text-decoration: none;
+        background-color: rgb(112, 70, 70);
+      }
+
+      .container_main_4 {
+        padding: 20px 50px;
+      }
+
+      .footer {
+        margin-bottom: 50px;
+      }
+
+      .footer ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+      }
+
+      .footer ul li {
+        display: inline-flex;
+        margin: 5px;
+      }
+
+      .footer a {
+        color: white;
+      }
+
+      .info,
+      address {
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap" class="basic">
+      <div class="menu">
+        <div class="menu_header">
+          네이버 영화
+        </div>
+
+        <div class="menu_body">
+          <ul>
+            <li>영화홈</li>
+            <li>상영작 예정작</li>
+            <li>영화랭킹</li>
+            <li>예매</li>
+            <li>평점 리뷰</li>
+            <li>다운로드</li>
+          </ul>
+        </div>
+
+        <div class="menu_footer">
+          인디 극장
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container_header">
+          <div class="container_header_login"><a>로그인</a></div>
+          <div class="container_header_menu"><a>메뉴</a></div>
+          <div class="container_header_search">
+            <input type="text" placeholder="영화검색" />
+            <input type="button" value="검색" />
+          </div>
+        </div>
+
+        <div class="container_rank">
+          <div class="container_rank_header">
+            <ul>
+              <li>예매순</li>
+              <li>현재상영작</li>
+              <li>개봉예정작</li>
+              <li>평점순</li>
+              <li>박스오피스</li>
+              <li>다운로드순</li>
+            </ul>
+          </div>
+
+          <div class="container_rank_main">
+            <ul>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container_main">
+          <div class="container_main_1">
+            <div class="container_review">
+              <h2>개봉영화 평점</h2>
+              <hr />
+
+              <h4>반도</h4>
+              <hr />
+
+              <h4>알라딘</h4>
+              <hr />
+
+              <h4>미녀와 야수</h4>
+              <hr />
+
+              <h4>소년시절의 너</h4>
+              <hr />
+            </div>
+
+            <div class="container_spotlight">
+              <h2>스포트라이트</h2>
+              <hr />
+              <a href="">
+                <img src="images/spot.jpg" alt="이미지" />
+              </a>
+
+              <a href="#" class="container_s_image"></a>
+            </div>
+          </div>
+
+          <div class="container_main_2">
+            <div class="container_main_2_header">
+              <h2>예고편</h2>
+              <h4>
+                <a href="#">더보기 ></a>
+              </h4>
+            </div>
+
+            <div class="container_main_2_content">
+              <ul>
+                <li>
+                  <a href=""></a>
+                  <p>비밀경찰</p>
+                  <p>메인 예고편</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>담보</p>
+                  <p>1차 예고편</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>해피 디 데이</p>
+                  <p>뮤직비디오</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>부다페스트</p>
+                  <p>비하인드</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container_main_3">
+            <h1>포토</h1>
+
+            <div class="container_main_3_content">
+              <ul>
+                <li>
+                  <a href=""></a>
+                  <p>강철비2</p>
+                  <p>동북아시아</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>빅샤크3</p>
+                  <p>신나는 모험</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>모든 것을</p>
+                  <p>특별한 트래킹</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>킬러맨</p>
+                  <p>숨막히는 추격</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>부니베어</p>
+                  <p>꼬마 늑대</p>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <p>죽지않는</p>
+                  <p>전대미문</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container_main_4">
+            <span><a href="">공지사항</a></span>
+
+            <a href="">공지 yes24 예매 서비스 점검 안내</a>
+
+            <hr />
+
+            <span>본 페이지는 나눔글꼴에 최적화 되어있습니다.</span>
+
+            <a href="">나눔글꼴설치</a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <ul>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">책임의 한계와 법적고지</a></li>
+            <li><a href="">영화 고객센터</a></li>
+          </ul>
+
+          <p class="info">
+            본 콘텐츠의 저작권은 저작권자 또는 제공처에 있으며, 이를 무단
+            이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.
+          </p>
+
+          <p class="info">
+            사업자등록번호 : 220-81-62517
+            <span>통신판매업 신고번호</span> : 경기성남 제 2006 - 692호
+            <span>대표이사 : 한성숙</span>
+            <span>
+              <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp">
+                사업자등록정보 확인
+              </a>
+            </span>
+            <br />
+            주소 : 경기도 성남시 분당구 불정로 6 네이버 그린팩토리
+            <span>대표전화 : 1588-3820</span>
+          </p>
+
+          <address>
+            <a href="http://www.navercorp.com/" target="_blank" class="logo"
+              ><img
+                src="https://ssl.pstatic.net/static/movie/2013/07/logo_naver.png"
+                width="63"
+                height="11"
+                alt="NAVER"
+            /></a>
+            <em>Copyright ©</em>
+            <a href="http://www.navercorp.com/" target="_blank">NAVER Corp.</a>
+            <span>All Rights Reserved.</span>
+          </address>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
