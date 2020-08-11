@@ -2,8 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Insert title here</title>
+    <title>Naver Movie Clone</title>
     <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         background: #727272;
         text-align: center;
@@ -62,40 +67,64 @@
       }
 
       .menu_header {
-        font-size: 20px;
-        text-align: center;
-        padding-top: 20px;
+        height: 36px;
+        padding: 11px 0 0;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
       }
 
-      .menu_body {
-        font-size: 15px;
+      .ci_logo img {
+        padding-bottom: 3px;
+        padding-right: 3px;
       }
 
-      .menu_footer {
-        font-size: 20px;
-        text-align: center;
-        border: 0.5px solid #2c2c2c;
-        background-color: #3b3b3b;
-        padding: 10px;
+      .menu_body ul a {
+        display: block;
+        overflow: hidden;
+        height: 39px;
+        background: url(https://ssl.pstatic.net/static/movie/2013/10/sp_nav.png)
+          no-repeat;
+      }
+
+      .menu_body ul a.menu01_on {
+        background-position: -150px 0;
+      }
+
+      .menu_body ul a.menu02 {
+        background-position: 0 -39px;
+      }
+
+      .menu_body ul a.menu03 {
+        background-position: 0 -78px;
+      }
+
+      .menu_body ul a.menu04 {
+        background-position: 0 -156px;
+      }
+
+      .menu_body ul a.menu05 {
+        background-position: 0 -234px;
+      }
+
+      .menu_body ul a.menu06 {
+        background-position: 0 -273px;
+      }
+
+      .menu_body li.menu_indi {
+        padding: 5px 4px 6px;
+      }
+
+      .menu_body ul a.menu07 {
+        width: 140px;
+        height: 43px;
+        background-position: 0 -315px;
       }
 
       .menu_body ul {
+        overflow: hidden;
         width: 100%;
-        display: block;
         list-style: none;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-      }
-
-      .menu_body ul li {
-        height: 30px;
-        border: 0.5px solid #2c2c2c;
-        padding-top: 15px;
-        padding-left: 10px;
-        background-color: #3b3b3b;
-        font-weight: 700;
       }
 
       .container_header {
@@ -290,23 +319,42 @@
   <body>
     <div id="wrap" class="basic">
       <div class="menu">
-        <div class="menu_header">
-          네이버 영화
-        </div>
+        <h1 class="menu_header">
+          <a
+            href="http://www.naver.com/"
+            title="naver로 바로가기"
+            class="ci_logo"
+            id="lnb_gonaver"
+          >
+            <img
+              src="https://ssl.pstatic.net/static/movie/2013/07/logo_ci.png"
+              width="62"
+              height="13"
+              alt="NAVER"
+            />
+          </a>
+
+          <a href="/" title="영화서비스홈으로 바로가기" class="svc_logo"
+            ><img
+              src="https://ssl.pstatic.net/static/movie/2012/06/logo_svc.png"
+              width="34"
+              height="19"
+              alt="영화"
+          /></a>
+        </h1>
 
         <div class="menu_body">
           <ul>
-            <li>영화홈</li>
-            <li>상영작 예정작</li>
-            <li>영화랭킹</li>
-            <li>예매</li>
-            <li>평점 리뷰</li>
-            <li>다운로드</li>
+            <li><a href="" title="영화홈" class="menu01_on"></a></li>
+            <li><a href="" title="상영작·예정작" class="menu02"></a></li>
+            <li><a href="" title="영화랭킹" class="menu03"></a></li>
+            <li><a href="" title="예매" class="menu04"></a></li>
+            <li><a href="" title="평점·리뷰" class="menu05"></a></li>
+            <li><a href="" title="다운로드" class="menu06"></a></li>
+            <li class="menu_indi">
+              <a href="" title="인디극장 UP" class="menu07"></a>
+            </li>
           </ul>
-        </div>
-
-        <div class="menu_footer">
-          인디 극장
         </div>
       </div>
 
