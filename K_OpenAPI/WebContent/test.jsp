@@ -44,7 +44,6 @@
         text-align: left;
         min-height: 100%;
         margin: 0 auto;
-        padding-top: 7px;
       }
 
       #wrap.basic {
@@ -129,39 +128,79 @@
         list-style: none;
       }
 
-      .container_header {
-        height: 30px;
-        text-align: right;
-        color: white;
-      }
-
       .container {
         margin-right: 150px;
         padding-left: 170px;
       }
 
-      .container_header div {
-        display: inline-block;
+      .container_header {
+        height: 45px;
+        color: white;
       }
 
-      .container_header_login {
-        width: 40px;
-        height: 20px;
-        border: 1px solid gray;
-        font-size: 10px;
-        text-align: center;
-      }
-
-      .container_header_search {
-        height: 30px;
-        text-align: center;
+      .container_header_box {
+        float: right ;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 6px;
       }
       
-      .container_header_menu	{
-      	background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat;
-	    width: 18px;
-	    height: 18px;
-	    background-position: -261px -120px;
+      .container_header_login_icon {
+        width: 46px;
+        height: 20px;
+        border: 1px solid #616161;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        background-color: #767676;
+        color: white;
+        margin-top: 7px;
+      }
+
+      .container_header_menu_icon {
+        background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006)
+          no-repeat;
+        background-position: -261px -120px;
+        width: 18px;
+        height: 18px;
+        margin-top: 7px;
+      }
+
+      .container_header_search form  {
+        display: flex;
+      }
+      
+      .container_header_search_bg {
+        background: url(https://ssl.pstatic.net/static/movie/2012/07/search_bg.png)
+          no-repeat;
+        width: 167px;
+        height: 33px;
+        position: relative;
+        vertical-align: middle;
+        padding-top: 3px;
+      }
+
+
+      .container_header_search_bg input {
+        display: inline-block;
+        width: 140px;
+        height: 28px;
+        padding: 0 0 1px 7px;
+        border: 0;
+        background: #323232;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 28px;
+        color: #fff;
+        margin-right: 15px;
+      }
+
+      .container_header_search button {
+        width: 44px;
+        height: 33px;
+        background: url(https://ssl.pstatic.net/static/movie/2012/07/btn_search.png) no-repeat;
+        border: 0;
       }
 
       .container_rank {
@@ -186,6 +225,7 @@
         width: 100%;
         display: block;
       }
+      
 
       .container_rank_header ul {
         width: 500px;
@@ -225,76 +265,77 @@
         margin-top: 10px;
         position: relative;
       }
-      
-      .container_rank_main ul li a img	{
-      	width: 130px;
-      	height: 180px;
+
+      .container_rank_main ul li a img {
+        width: 130px;
+        height: 180px;
       }
-      
-      .container_rank_main ul li a span.rank	{
-	    position: absolute;
+
+      .container_rank_main ul li a span.rank {
+        position: absolute;
         top: 7px;
-	    left: 6px;
-	    width: 17px;
-	    height: 22px;
-	    display: block;
-	    background: url(https://ssl.pstatic.net/static/movie/2019/09/bg_sp_home.png) no-repeat;
+        left: 6px;
+        width: 17px;
+        height: 22px;
+        display: block;
+        background: url(https://ssl.pstatic.net/static/movie/2019/09/bg_sp_home.png)
+          no-repeat;
       }
-      
-      .container_rank_main ul li a span.rank1	{
-    	background-position: 0 0;
+
+      .container_rank_main ul li a span.rank1 {
+        background-position: 0 0;
       }
-      
-      .container_rank_main ul li a span.rank2	{
-    	background-position: -17px 0;
+
+      .container_rank_main ul li a span.rank2 {
+        background-position: -17px 0;
       }
-      
-      .container_rank_main ul li a span.rank3	{
-    	background-position: -39px 0;
+
+      .container_rank_main ul li a span.rank3 {
+        background-position: -39px 0;
       }
-      
-      .container_rank_main ul li a span.rank4	{
-    	background-position: -61px 0;
+
+      .container_rank_main ul li a span.rank4 {
+        background-position: -61px 0;
       }
-      
-      .container_rank_main ul li a span.rank5	{
-    	background-position: -83px 0;
+
+      .container_rank_main ul li a span.rank5 {
+        background-position: -83px 0;
       }
-      
-      .container_rank_main ul li a span.rank6	{
-    	background-position: -105px 0;
+
+      .container_rank_main ul li a span.rank6 {
+        background-position: -105px 0;
       }
-      
-      .container_rank_main ul li a span.rank7	{
-    	background-position: -126px 0;
+
+      .container_rank_main ul li a span.rank7 {
+        background-position: -126px 0;
       }
-      
-      .container_rank_main ul li a span.rank8	{
-    	background-position: -148px 0;
+
+      .container_rank_main ul li a span.rank8 {
+        background-position: -148px 0;
       }
-      
-      .container_rank_main ul li a span.rank9	{
-    	background-position: -170px 0;
+
+      .container_rank_main ul li a span.rank9 {
+        background-position: -170px 0;
       }
-      
-      .container_rank_main ul li a span.rank10	{
-    	background-position: -192px 0;
-    	width: 27px;
+
+      .container_rank_main ul li a span.rank10 {
+        background-position: -192px 0;
+        width: 27px;
       }
-      
-      .container_rank_main_cnt	{
-      	color: #f24443;
-      	font-weight: bold;
-      	background-color: #151516;
-      	height: 20px;
-      	text-align: center;
-      	padding-top: 5px;
-      	font-size: 11px;
-      	 z-index: 5;
+
+      .container_rank_main_cnt {
+        color: #f24443;
+        font-weight: bold;
+        background-color: #151516;
+        height: 20px;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 11px;
+        z-index: 5;
       }
-      
-      .container_rank_main_cnt span	{
-      	color: #ebebeb;
+
+      .container_rank_main_cnt span {
+        color: #ebebeb;
       }
 
       .container_main_1 {
@@ -513,7 +554,7 @@ $(function() {
 
 </script>
 </head>
-<body>
+  <body>
     <div id="wrap" class="basic">
       <div class="menu">
         <h1 class="menu_header">
@@ -557,15 +598,27 @@ $(function() {
 
       <div class="container">
         <div class="container_header">
-          <div class="container_header_login"><a>로그인</a></div>
-          <div class="container_header_menu"><a></a></div>
-          <div class="container_header_search">
-          	<form action="https://movie.naver.com/movie/search/result.nhn" method="get">
-	            <input type="text" placeholder="영화검색" name="query" />
-	            <input type="hidden" name="section" value="all" />
-	            <input type="hidden" name="ie" value="utf8" />
-	            <input type="submit" value="검색"/>
-          	</form>
+            <div class="container_header_box">
+
+              <div class="container_header_login">
+                <a href=""><div class="container_header_login_icon">로그인</div></a>
+              </div>
+            <div class="container_header_menu">
+              <a href=""><div class="container_header_menu_icon"></div></a>
+            </div>
+            <div class="container_header_search">
+              <form
+              action="https://movie.naver.com/movie/search/result.nhn"
+              method="get"
+              >
+              <div class="container_header_search_bg">
+                <input type="text" placeholder="영화검색" name="query" />
+              </div>
+              <input type="hidden" name="section" value="all" />
+              <input type="hidden" name="ie" value="utf8" />
+              <button type="submit">
+              </form>
+            </div>
           </div>
         </div>
 
@@ -582,9 +635,7 @@ $(function() {
           </div>
 
           <div class="container_rank_main">
-            <ul class="container_rank_main_ul">
-           	 
-            </ul>
+            <ul class="container_rank_main_ul"></ul>
           </div>
         </div>
 
