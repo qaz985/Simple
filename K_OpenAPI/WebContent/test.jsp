@@ -601,7 +601,7 @@ $(function() {
             <div class="container_header_box">
 
               <div class="container_header_login">
-                <a href=""><div class="container_header_login_icon">로그인</div></a>
+                <a href="naverLogin.jsp"><div class="container_header_login_icon">로그인</div></a>
               </div>
             <div class="container_header_menu">
               <a href=""><div class="container_header_menu_icon"></div></a>
