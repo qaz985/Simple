@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
+ 	<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+  
     <meta charset="UTF-8" />
     <title>Naver Movie Clone</title>
     <style type="text/css">
@@ -439,6 +442,8 @@
       }
     </style>
     
+
+    
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 
@@ -496,7 +501,7 @@ $(function() {
 				//&itemPerPage: 1-10위 까지의 데이터가 출력되도록 설정
 				url : "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=101bf546e267e597f93b69f96c123d98&targetDt="
 						+ result,
-				dataType : "json",
+				dataType : "JSON",
 				success: function (data) {
 		             var movieName = new Array();
 		             var movieCnt = new Array();
@@ -601,8 +606,24 @@ $(function() {
             <div class="container_header_box">
 
               <div class="container_header_login">
-                <a href="naverLogin.jsp"><div class="container_header_login_icon">로그인</div></a>
+              	<div id="naver_id_login" style="disply:none;"></div>
+                <div class="container_header_login_icon" onclick="document.getElementById('naver_id_login_anchor').click();">로그인</div>
               </div>
+              
+              
+              <script type="text/javascript">
+					var naverLogin = new naver.LoginWithNaverId(
+						{
+							clientId: "exgg34upk3Gj35838MIs",
+							callbackUrl: "http://localhost:8090/callback.html",
+							isPopup: false, /* 팝업을 통한 연동처리 여부 */
+						}
+					);
+					
+					/* 설정정보를 초기화하고 연동을 준비 */
+					naverLogin.init();
+					
+				</script>
             <div class="container_header_menu">
               <a href=""><div class="container_header_menu_icon"></div></a>
             </div>
