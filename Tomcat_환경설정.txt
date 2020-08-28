@@ -1,0 +1,21 @@
+1. 이클립스 준비
+2. workspace 준비
+3. tomcat.apache.org 접속
+4. Tomcat 8 다운로드 -> core - zip 파일 다운로드
+5. 압축 풀어서 C: 아래에 Tomcat8.5 폴더로 이름 바꿔서 배치
+6. 이클립스 구동
+7. Java EE 퍼스펙티브 사용
+8. 화면 아래 servers 탭에서 server 추가
+9. apache - tomcat 8.5 선택 - Tomcat8.5 폴더 등록
+10. window - preferences - 인코딩 작업
+    1) General - Content type - text - utf-8 입력 후 update
+    2) General - Workspace - MS949 -> UTF-8 변경
+    3) Web - html/css/jsp - UTF-8(첫 번째 메뉴)로 변경
+11. window - preferences - 웹 브라우저를 크롬으로 변경
+    General - web browser - chrome 선택
+
+* 8080 포트번호 충돌 시 해결
+C:\Tomcat8.5\conf\server.xml 파일을 열고
+
+<Connector port = "8080" ....
+<Connector port = "9090" .... 수정 후 저장>
